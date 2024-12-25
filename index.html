@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBrew Academy - Learn to Code Deliciously</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#F5E6D3',
+                        coffee: {
+                            light: '#E6D5C3',
+                            DEFAULT: '#967259',
+                            dark: '#634832'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .pixel-font { font-family: 'Press Start 2P', cursive; }
+        .body-font { font-family: 'Inter', sans-serif; }
+        
+        .page-curl {
+            position: relative;
+            background: #F5E6D3;
+            border-radius: 0.5rem;
+        }
+        
+        .page-curl::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 2rem;
+            height: 2rem;
+            background: linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.05) 50%);
+            border-radius: 0 0 0.5rem 0;
+        }
+
+        .chapter-card {
+            transition: all 0.3s ease;
+        }
+        
+        .chapter-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -8px rgba(0,0,0,0.15);
+        }
+        .bg-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23967259' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-coffee-light to-paper min-h-screen">
+    <nav class="bg-coffee-dark shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="pixel-font text-xl text-white hover:text-coffee-light transition-colors">
+                        CodeBrew Academy
+                    </a>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="body-font text-white hover:text-coffee-light transition-colors">Home</a>
+                    <a href="chapters.html" class="body-font text-white hover:text-coffee-light transition-colors">Chapters</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="page-curl bg-paper bg-pattern p-8 md:p-12 shadow-xl">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="pixel-font text-2xl sm:text-3xl md:text-4xl text-coffee-dark mb-4 sm:mb-6 leading-relaxed">
+                    Cooking Up Code for Noobs
+                </h1>
+                <p class="body-font text-base sm:text-lg md:text-xl text-coffee mb-8 sm:mb-12">
+                    Welcome to the tastiest coding cookbook on the web!
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    <div class="chapter-card bg-white rounded-lg p-6 shadow-md">
+                        <div class="bg-coffee-light rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-4xl">🌿</span>
+                        </div>
+                        <h2 class="pixel-font text-lg text-coffee-dark">Git</h2>
+                        <p class="body-font text-coffee mt-2 text-sm">Version Control</p>
+                    </div>
+
+                    <div class="chapter-card bg-white rounded-lg p-6 shadow-md">
+                        <div class="bg-coffee-light rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-4xl">🐍</span>
+                        </div>
+                        <h2 class="pixel-font text-lg text-coffee-dark">Python</h2>
+                        <p class="body-font text-coffee mt-2 text-sm">Programming Basics</p>
+                    </div>
+
+                    <div class="chapter-card bg-white rounded-lg p-6 shadow-md">
+                        <div class="bg-coffee-light rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-4xl">📜</span>
+                        </div>
+                        <h2 class="pixel-font text-lg 1text-base text-coffee-dark">JS</h2>
+                        <p class="body-font text-coffee mt-2 text-sm">Web Development</p>
+                    </div>
+
+                    <div class="chapter-card bg-white rounded-lg p-6 shadow-md">
+                        <div class="bg-coffee-light rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                            <span class="text-4xl">⌨️</span>
+                        </div>
+                        <h2 class="pixel-font text-lg text-coffee-dark">Nvim</h2>
+                        <p class="body-font text-coffee mt-2 text-sm">Text Editing</p>
+                    </div>
+                </div>
+
+                <a href="chapters.html" 
+                   class="pixel-font inline-block bg-coffee hover:bg-coffee-dark text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl">
+                    Start Learning!
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-coffee-dark py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="body-font text-white/80">Made with ☕ by <a href="https://github.com/divpreeet" target="_blank" class="underline hover:text-white">Divpreet</a>. Brew your own code at <a href="https://github.com/divpreeet/codebrew-academy" target="_blank" class="underline hover:text-white">CodeBrew Academy</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>

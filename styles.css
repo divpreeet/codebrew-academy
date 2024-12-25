@@ -1,0 +1,88 @@
+:root {
+    --coffee-100: #F3E8D6;
+    --coffee-200: #E6D0B5;
+    --coffee-300: #C4A484;
+    --coffee-400: #A67B5B;
+    --coffee-500: #8B4513;
+    --coffee-600: #6F3610;
+    --coffee-700: #52280D;
+    --coffee-800: #36190A;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-pixel {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--coffee-100);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: translateX(0);
+}
+
+.book-page {
+    background-color: var(--coffee-100);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative;
+}
+
+.book-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0) 90%, rgba(0,0,0,0.1) 100%);
+    pointer-events: none;
+}
+
+.chapter-icon {
+    background-color: var(--coffee-200);
+    border-radius: 10px;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chapter-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.code-block {
+    background-color: var(--coffee-800);
+    color: var(--coffee-100);
+    border-radius: 10px;
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+

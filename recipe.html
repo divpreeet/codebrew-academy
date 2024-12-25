@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe - CodeBrew Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#F5E6D3',
+                        coffee: {
+                            light: '#E6D5C3',
+                            DEFAULT: '#967259',
+                            dark: '#634832'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .pixel-font { font-family: 'Press Start 2P', cursive; }
+        .body-font { font-family: 'Inter', sans-serif; }
+        
+        .page-curl {
+            position: relative;
+            background: #F5E6D3;
+            border-radius: 0.5rem;
+        }
+        
+        .page-curl::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 2rem;
+            height: 2rem;
+            background: linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.05) 50%);
+            border-radius: 0 0 0.5rem 0;
+        }
+
+        .CodeMirror {
+            border-radius: 0.5rem;
+            padding: 1rem;
+            font-family: 'Fira Code', monospace;
+            background-color: #2D2A2E;
+        }
+
+        .cm-s-monokai.CodeMirror {
+            background-color: #2D2A2E;
+        }
+
+        #toast-container {
+            pointer-events: none;
+        }
+        #toast-container > div {
+            pointer-events: auto;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 100%, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        .fadeInUp {
+            animation-name: fadeInUp;
+            animation-duration: 0.3s;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-coffee-light to-paper min-h-screen">
+    <nav class="bg-coffee-dark shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="pixel-font text-xl text-white hover:text-coffee-light transition-colors">
+                        CodeBrew Academy
+                    </a>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="body-font text-white hover:text-coffee-light transition-colors">Home</a>
+                    <a href="chapters.html" class="body-font text-white hover:text-coffee-light transition-colors">Chapters</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="page-curl bg-paper p-8 md:p-12 shadow-xl">
+            <a href="chapters.html" class="inline-block mb-6 pixel-font text-coffee-dark hover:text-coffee transition-colors hover:translate-x-1 transform">
+                ← Back to Chapters
+            </a>
+            <div id="recipe-content" class="space-y-8">
+                <!-- Recipe content will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-coffee-dark py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="body-font text-white/80">Made with ☕ by <a href="https://github.com/divpreeet" target="_blank" class="underline hover:text-white">Divpreet</a>. Brew your own code at <a href="https://github.com/divpreeet/codebrew-academy" target="_blank" class="underline hover:text-white">CodeBrew Academy</a>.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <script src="recipe.js"></script>
+</body>
+</html>
+
