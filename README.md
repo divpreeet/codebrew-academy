@@ -9,7 +9,6 @@ An indie-styled website for coding beginners, offering fun, beginner-friendly ch
   - Python for Noobs
   - JavaScript for Noobs
   - Nvim for Noobs
-- **Interactive Code Editor**: Practice coding directly on the site with an embedded editor (powered by CodeMirror).
 - **Step-by-Step Recipes**: Clear and concise instructions for each coding concept.
 - **Loading Animations**: Fun pixel-art animations during transitions.
 
